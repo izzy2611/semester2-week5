@@ -2,8 +2,8 @@
  * Sem 2, week 5
  *
  * Portfolio submission: Hexadecimal to Decimal Converter
- * Name:
- * ID: 
+ * Name: Izzy Shaw 
+ * ID: 201956339
  */
 
 #include <stdio.h>
@@ -19,10 +19,11 @@ int main(void){
 	int k;
 	int j;
 
-	
+	//Ask user for a input and read that input 
 	printf("Enter a hexadecimal:");
 	fgets(hex, sizeof(hex), stdin);
 
+	//Loops through values in users input, converts all the letters to numbers
 	for (i=0; hex[i] != '\n' && hex[i] != '\0'; i++) {
 		switch (hex[i]){
 			case 'A':
@@ -43,6 +44,7 @@ int main(void){
 			case 'F':
 				value = 15;
 				break;
+			//If it is between 0-9 or it is one of the cases above it is accepted, otherwise an error message is displayed and the program stops
 			default:
 				if (hex[i] >=48 && hex[i] <= 57 ) {
 					value = hex[i] - '0';
@@ -53,19 +55,13 @@ int main(void){
 					return(1);
 				}
 			}
-		
+	//Calculates the final hex value
 	decimal = decimal * 16 + value;
 			
 		}
 	
 
 	
-
-	// if input contains invalid hex digit
-	//if (hex[i] > 10 || hex[i] < 'F') {
-	//printf("Error:Invalid Hexadcimal\n");
-	//}
-	// printf("Error: Invalid Hexadecimal\n");
 	
 	// print the decimal result
 	printf("decimal:%ld\n", decimal);
