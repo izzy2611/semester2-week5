@@ -26,21 +26,27 @@ int main(void){
 	//Loops through values in users input, converts all the letters to numbers
 	for (i=0; hex[i] != '\n' && hex[i] != '\0'; i++) {
 		switch (hex[i]){
+			case 'a':
 			case 'A':
 				value = 10;
 				break;
+			case 'b':
 			case 'B':
 				value = 11;
 				break;
+			case 'c':
 			case 'C':
 				value = 12;
 				break;
+			case 'd':
 			case 'D':
 				value = 13;
 				break;
+			case'e':
 			case 'E':
 				value = 14;
 				break;
+			case'f':
 			case 'F':
 				value = 15;
 				break;
@@ -51,7 +57,7 @@ int main(void){
 					break;
 				}
 				else {
-					printf("Error:Invalid Hexadecimal\n");
+					printf("Error: Invalid Hexadecimal\n");
 					return(1);
 				}
 			}
